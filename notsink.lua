@@ -2,6 +2,8 @@
 -- Notification sink, e.g. for urxvt -name notsink windows
 --]]
 
+notsink = {}
+
 local NAME = 'notsink'
 local ATTR = 'sink'
 
@@ -10,7 +12,7 @@ defwinprop{
     target = NAME,
 }
 
-function notsink_set() -- FIXME Not global please, use pkg and all
+function notsink.set() -- FIXME Not global please, use pkg and all
     -- XXX Difference between a parent and a manager?
     cur = ioncore.current()
     if obj_is(cur, 'WFrame') then
