@@ -12,7 +12,7 @@ defwinprop{
     target = NAME,
 }
 
-function notsink.set() -- FIXME Not global please, use pkg and all
+function notsink.set()
     -- XXX Difference between a parent and a manager?
     cur = ioncore.current()
     if obj_is(cur, 'WFrame') then
